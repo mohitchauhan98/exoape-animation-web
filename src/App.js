@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './Components/Landing';
+import Navbar from './Components/Navbar';
+import News from './Components/News';
+import PlayReel from './Components/PlayReel';
+import Spread from './Components/Spread';
+import Story from './Components/Story';
+import Work from './Components/Work';
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full select-none">
+      <Navbar />
+      <Landing />
+      <Work />
+      <PlayReel />
+      <News />
+      <Spread />
+      <Story />
     </div>
   );
 }
